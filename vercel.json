@@ -5,10 +5,5 @@
       "src": "package.json",
       "use": "@vercel/next"
     }
-  ],
-  "env": {
-    "NEXT_PUBLIC_APP_URL": {
-      "description": "Public URL of the application"
-    }
-  }
+  ]
 }
