@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import '.styles/globals.css'
+import '..styles/globals.css'
 export const metadata: Metadata = {
   title: 'Dutch Taxi Transfers - Fixed-Price Airport Taxi Amsterdam to Schiphol',
   description: 'Reliable, fixed-price airport taxi and transfer service in Amsterdam. Book your Schiphol transfer online. 24/7, no hidden fees, professional drivers.',
