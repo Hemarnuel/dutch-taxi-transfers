@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { BUSINESS_DATA } from '@/lib/constants'
 
 export default function CTAFooter() {
@@ -15,9 +16,12 @@ export default function CTAFooter() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <button className="bg-secondary hover:bg-orange-600 text-primary font-bold py-4 px-8 rounded-lg text-lg transition transform hover:scale-105 active:scale-95">
+            <Link
+              href="/booking"
+              className="bg-secondary hover:bg-orange-600 text-primary font-bold py-4 px-8 rounded-lg text-lg transition transform hover:scale-105 active:scale-95 inline-block"
+            >
               Book Now
-            </button>
+            </Link>
             <a
               href={`tel:${BUSINESS_DATA.phone}`}
               className="bg-white hover:bg-blue-50 text-primary font-bold py-4 px-8 rounded-lg text-lg transition flex items-center justify-center gap-2"

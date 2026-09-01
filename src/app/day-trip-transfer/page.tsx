@@ -39,12 +39,18 @@ export default function DayTripTransfer() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-secondary hover:bg-orange-600 text-primary font-bold py-3 px-6 rounded-lg transition">
+              <Link
+                href="/booking"
+                className="inline-block bg-secondary hover:bg-orange-600 text-primary font-bold py-3 px-6 rounded-lg transition text-center"
+              >
                 Book Day Trip Transfer
-              </button>
-              <button className="bg-white hover:bg-blue-50 text-primary font-bold py-3 px-6 rounded-lg transition">
-                Call for Custom Itinerary
-              </button>
+              </Link>
+              <Link
+                href="/quote"
+                className="inline-block bg-white hover:bg-blue-50 text-primary font-bold py-3 px-6 rounded-lg transition text-center"
+              >
+                Request Custom Itinerary
+              </Link>
             </div>
           </div>
         </div>
@@ -171,9 +177,12 @@ export default function DayTripTransfer() {
 
             {/* CTA */}
             <div className="text-center">
-              <button className="bg-primary hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition mb-4">
+              <Link
+                href="/booking"
+                className="inline-block bg-primary hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition mb-4"
+              >
                 Reserve Your Day Trip Now
-              </button>
+              </Link>
               <p className="text-gray-600">
                 Or call <strong className="text-primary">+31 20 308 6885</strong> to discuss your custom itinerary
               </p>

@@ -55,12 +55,18 @@ export default function BusinessTaxi() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-secondary hover:bg-orange-600 text-primary font-bold py-3 px-6 rounded-lg transition">
+              <Link
+                href="/booking"
+                className="inline-block bg-secondary hover:bg-orange-600 text-primary font-bold py-3 px-6 rounded-lg transition text-center"
+              >
                 Book Business Transfer
-              </button>
-              <button className="bg-white hover:bg-blue-50 text-primary font-bold py-3 px-6 rounded-lg transition">
-                Call for Quote
-              </button>
+              </Link>
+              <Link
+                href="/quote"
+                className="inline-block bg-white hover:bg-blue-50 text-primary font-bold py-3 px-6 rounded-lg transition text-center"
+              >
+                Request Quote
+              </Link>
             </div>
           </div>
         </div>
@@ -117,9 +123,12 @@ export default function BusinessTaxi() {
                 </li>
               </ul>
 
-              <button className="bg-primary hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition">
+              <Link
+                href="/booking"
+                className="inline-block bg-primary hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition"
+              >
                 Book Now
-              </button>
+              </Link>
             </div>
 
             <div className="bg-blue-50 rounded-lg p-8 border-2 border-primary">

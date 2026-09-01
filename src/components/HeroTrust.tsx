@@ -1,10 +1,17 @@
 'use client'
 
+import Link from 'next/link'
 import { BUSINESS_DATA } from '@/lib/constants'
 
 export default function HeroTrust() {
   return (
-    <section className="relative bg-gradient-to-r from-primary to-blue-600 text-white py-12 md:py-20 overflow-hidden">
+    <section
+      className="relative bg-gradient-to-r from-primary to-blue-600 text-white py-12 md:py-20 overflow-hidden bg-cover bg-center"
+      style={{
+        backgroundImage:
+          'linear-gradient(rgba(0, 61, 130, 0.85), rgba(0, 61, 130, 0.85)), url(/images/amsterdam%20airport.jpg)',
+      }}
+    >
       {/* Background accent */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
@@ -75,26 +82,41 @@ export default function HeroTrust() {
 
           {/* Right: CTA Buttons */}
           <div className="space-y-4">
-            <button className="w-full bg-secondary hover:bg-orange-600 text-primary font-bold py-4 px-6 rounded-lg text-lg transition transform hover:scale-105 active:scale-95">
+            <Link
+              href="/booking"
+              className="block w-full bg-secondary hover:bg-orange-600 text-primary font-bold py-4 px-6 rounded-lg text-lg transition transform hover:scale-105 active:scale-95 text-center"
+            >
               Book Airport Transfer
-            </button>
-            <button className="w-full bg-white hover:bg-blue-50 text-primary font-bold py-4 px-6 rounded-lg text-lg transition">
-              Call +31 20 308 6885
-            </button>
+            </Link>
+            <a
+              href={`tel:${BUSINESS_DATA.phone}`}
+              className="block w-full bg-white hover:bg-blue-50 text-primary font-bold py-4 px-6 rounded-lg text-lg transition text-center"
+            >
+              Call {BUSINESS_DATA.phone}
+            </a>
 
             {/* Persona Navigation */}
             <div className="pt-4 space-y-3">
               <p className="text-sm text-blue-100 font-semibold">Need something different?</p>
               <div className="grid grid-cols-2 gap-2">
-                <button className="bg-blue-500/20 hover:bg-blue-500/40 px-4 py-2 rounded text-sm font-semibold transition">
+                <Link
+                  href="/business-taxi-amsterdam"
+                  className="bg-blue-500/20 hover:bg-blue-500/40 px-4 py-2 rounded text-sm font-semibold transition text-center"
+                >
                   Business Travel
-                </button>
-                <button className="bg-blue-500/20 hover:bg-blue-500/40 px-4 py-2 rounded text-sm font-semibold transition">
+                </Link>
+                <Link
+                  href="/day-trip-transfer"
+                  className="bg-blue-500/20 hover:bg-blue-500/40 px-4 py-2 rounded text-sm font-semibold transition text-center"
+                >
                   Family Transport
-                </button>
-                <button className="col-span-2 bg-blue-500/20 hover:bg-blue-500/40 px-4 py-2 rounded text-sm font-semibold transition">
-                  Day Trip Service
-                </button>
+                </Link>
+                <Link
+                  href="/quote"
+                  className="col-span-2 bg-blue-500/20 hover:bg-blue-500/40 px-4 py-2 rounded text-sm font-semibold transition text-center"
+                >
+                  Get Custom Quote
+                </Link>
               </div>
             </div>
           </div>
