@@ -23,7 +23,7 @@ const BUSINESS_FAQ = [
   },
   {
     question: 'Are your drivers familiar with the Amsterdam business district?',
-    answer: 'Yes, all drivers are knowledgeable about Amsterdam's business areas and can navigate efficiently to corporate offices, hotels, and meeting venues.',
+    answer: 'Yes, all drivers are knowledgeable about Amsterdam business areas and can navigate efficiently to corporate offices, hotels, and meeting venues.',
   },
 ]
 
