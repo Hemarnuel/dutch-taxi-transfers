@@ -58,7 +58,7 @@ export default function DayTripTransfer() {
               Explore Amsterdam at Your Own Pace
             </h2>
             <p className="text-lg text-gray-600 mb-12">
-              Whether you're interested in museums, canal tours, or picturesque villages, our day trip transfer service makes it easy to explore without the hassle of public transport.
+              Whether you&apos;re interested in museums, canal tours, or picturesque villages, our day trip transfer service makes it easy to explore without the hassle of public transport.
             </p>
 
             <div className="grid md:grid-cols-2 gap-8 mb-12">

@@ -1,0 +1,82 @@
+
+> dutch-taxi-transfers@0.1.0 build
+> next build
+
+  ▲ Next.js 14.2.35
+
+   Creating an optimized production build ...
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../typescript/lib/typescript' in c:\Users\Emmanuel\Desktop\zikas-dental-studio\dutch-taxi-transfers\node_modules\next\dist\build for build dependencies doesn't lead to expected result 'C:\Users\Emmanuel\Desktop\zikas-dental-studio\dutch-taxi-transfers\node_modules\typescript\lib\typescript.js', but to 'c:\Users\Emmanuel\Desktop\zikas-dental-studio\dutch-taxi-transfers\node_modules\typescript\lib\typescript.js' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../typescript/lib/typescript (expected C:\Users\Emmanuel\Desktop\zikas-dental-studio\dutch-taxi-transfers\node_modules\typescript\lib\typescript.js)
+<w>  at file dependencies c:\Users\Emmanuel\Desktop\zikas-dental-studio\dutch-taxi-transfers\node_modules\next\dist\build\load-jsconfig.js
+<w>  at file c:\Users\Emmanuel\Desktop\zikas-dental-studio\dutch-taxi-transfers\node_modules\next\dist\build\load-jsconfig.js
+<w>  at file dependencies c:\Users\Emmanuel\Desktop\zikas-dental-studio\dutch-taxi-transfers\node_modules\next\dist\build\webpack-config.js
+<w>  at file c:\Users\Emmanuel\Desktop\zikas-dental-studio\dutch-taxi-transfers\node_modules\next\dist\build\webpack-config.js
+<w>  at file dependencies c:\Users\Emmanuel\Desktop\zikas-dental-studio\dutch-taxi-transfers\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
+<w>  at file c:\Users\Emmanuel\Desktop\zikas-dental-studio\dutch-taxi-transfers\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
+<w>  at resolve commonjs c:\Users\Emmanuel\Desktop\zikas-dental-studio\dutch-taxi-transfers\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../typescript/lib/typescript' in c:\Users\Emmanuel\Desktop\zikas-dental-studio\dutch-taxi-transfers\node_modules\next\dist\build for build dependencies doesn't lead to expected result 'C:\Users\Emmanuel\Desktop\zikas-dental-studio\dutch-taxi-transfers\node_modules\typescript\lib\typescript.js', but to 'c:\Users\Emmanuel\Desktop\zikas-dental-studio\dutch-taxi-transfers\node_modules\typescript\lib\typescript.js' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../typescript/lib/typescript (expected C:\Users\Emmanuel\Desktop\zikas-dental-studio\dutch-taxi-transfers\node_modules\typescript\lib\typescript.js)
+<w>  at file dependencies c:\Users\Emmanuel\Desktop\zikas-dental-studio\dutch-taxi-transfers\node_modules\next\dist\build\load-jsconfig.js
+<w>  at file c:\Users\Emmanuel\Desktop\zikas-dental-studio\dutch-taxi-transfers\node_modules\next\dist\build\load-jsconfig.js
+<w>  at file dependencies c:\Users\Emmanuel\Desktop\zikas-dental-studio\dutch-taxi-transfers\node_modules\next\dist\build\webpack-config.js
+<w>  at file c:\Users\Emmanuel\Desktop\zikas-dental-studio\dutch-taxi-transfers\node_modules\next\dist\build\webpack-config.js
+<w>  at file dependencies c:\Users\Emmanuel\Desktop\zikas-dental-studio\dutch-taxi-transfers\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
+<w>  at file c:\Users\Emmanuel\Desktop\zikas-dental-studio\dutch-taxi-transfers\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
+<w>  at resolve commonjs c:\Users\Emmanuel\Desktop\zikas-dental-studio\dutch-taxi-transfers\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/11) ...
+   Generating static pages (2/11) 
+ ⚠ Unsupported metadata viewport is configured in metadata export in /day-trip-transfer. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /day-trip-transfer. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /_not-found. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /_not-found. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /business-taxi-amsterdam. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /business-taxi-amsterdam. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+   Generating static pages (5/11) 
+ ⚠ Unsupported metadata viewport is configured in metadata export in /schiphol-airport-taxi. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /schiphol-airport-taxi. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /family-transfer-service. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /family-transfer-service. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+   Generating static pages (8/11) 
+ ⚠ Unsupported metadata viewport is configured in metadata export in /amsterdam-transport-booking. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /amsterdam-transport-booking. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ✓ Generating static pages (11/11)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    1.95 kB         102 kB
+├ ○ /_not-found                          873 B          88.2 kB
+├ ○ /amsterdam-transport-booking         3.38 kB        99.4 kB
+├ ○ /business-taxi-amsterdam             3.47 kB        99.5 kB
+├ ○ /day-trip-transfer                   2.85 kB        98.9 kB
+├ ○ /family-transfer-service             3.47 kB        99.5 kB
+├ ○ /robots.txt                          0 B                0 B
+├ ○ /schiphol-airport-taxi               203 B           100 kB
+└ ○ /sitemap.xml                         0 B                0 B
++ First Load JS shared by all            87.3 kB
+  ├ chunks/117-6d3152f80147ba9e.js       31.7 kB
+  ├ chunks/fd9d1056-9f91b5e418130764.js  53.6 kB
+  └ other shared chunks (total)          1.95 kB
+
+
+○  (Static)  prerendered as static content
+

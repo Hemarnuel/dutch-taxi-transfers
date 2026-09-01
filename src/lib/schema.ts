@@ -80,7 +80,6 @@ export function generateAirportTransferSchema() {
       '@type': 'Offer',
       priceCurrency: 'EUR',
       price: '35-45',
-      priceCurrency: 'EUR',
       url: `${BUSINESS_DATA.website}/schiphol-airport-taxi`,
       availability: 'https://schema.org/InStock',
       validFrom: new Date().toISOString().split('T')[0],
