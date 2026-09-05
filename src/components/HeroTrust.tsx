@@ -9,7 +9,7 @@ export default function HeroTrust() {
       className="relative bg-gradient-to-r from-primary to-blue-600 text-white py-12 md:py-20 overflow-hidden bg-cover bg-center"
       style={{
         backgroundImage:
-          'linear-gradient(rgba(0, 61, 130, 0.65), rgba(0, 61, 130, 0.65)), url(/images/amsterdam%20airport.jpg)',
+          'linear-gradient(rgba(0, 61, 130, 0.75), rgba(0, 61, 130, 0.75)), url(/images/amsterdam%20airport.jpg)',
       }}
     >
       {/* Background accent */}
