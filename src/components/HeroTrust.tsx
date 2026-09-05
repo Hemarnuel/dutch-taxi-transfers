@@ -32,7 +32,7 @@ export default function HeroTrust() {
             <div className="space-y-4 mb-8">
               {/* Price Anchor */}
               <div className="flex items-start gap-3 bg-white/10 p-4 rounded-lg backdrop-blur">
-                <div className="text-2xl font-bold text-secondary flex-shrink-0">€35</div>
+                <div className="text-2xl font-bold text-secondary flex-shrink-0">€50</div>
                 <div>
                   <p className="font-semibold">Fixed Price Guaranteed</p>
                   <p className="text-blue-100 text-sm">Schiphol to Amsterdam City Center</p>
