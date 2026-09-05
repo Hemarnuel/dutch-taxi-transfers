@@ -8,7 +8,7 @@ import CTAFooter from '@/components/CTAFooter'
 
 export const metadata: Metadata = {
   title: 'Dutch Taxi Transfers - Fixed-Price Airport Taxi & Transfer Service',
-  description: 'Reliable fixed-price airport taxi from Amsterdam Schiphol to city center. Professional drivers, 24/7 booking, no hidden fees. €35-€45 guaranteed.',
+  description: 'Reliable fixed-price airport taxi from Amsterdam Schiphol to city center. Professional drivers, 24/7 booking, no hidden fees. €50-€65 guaranteed.',
   keywords: 'airport taxi amsterdam, schiphol transfer, taxi service, airport transfer, amsterdam transportation',
   openGraph: {
     title: 'Dutch Taxi Transfers - Fixed-Price Airport Taxi',
