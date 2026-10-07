@@ -1,162 +1,184 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import CTAFooter from '@/components/CTAFooter'
+import HeroTrust from '@/components/HeroTrust'
+import ProofSignals from '@/components/ProofSignals'
+import PricingTransparency from '@/components/PricingTransparency'
 import FAQAccordion from '@/components/FAQAccordion'
+import CTAFooter from '@/components/CTAFooter'
 
 export const metadata: Metadata = {
-  title: 'Business Taxi Amsterdam | Professional Corporate Transfer Service',
-  description: 'Professional business taxi and corporate transfer service in Amsterdam. Reliable, punctual, and premium vehicles for business travelers.',
-  keywords: 'business taxi amsterdam, corporate transfer, business transportation',
+  title: 'Corporate Roadshow Transport Amsterdam | Executive Disposal Service',
+  description: 'Multi-stop corporate roadshow transport in Amsterdam. Executive hourly disposal, dedicated chauffeur, flexible scheduling.',
+  keywords: 'corporate roadshow chauffeur, executive roadshow transport Amsterdam, business disposal service',
   alternates: {
     canonical: 'https://dutchtaxitransfers.nl/business-taxi-amsterdam',
   },
 }
 
-const BUSINESS_FAQ = [
+const CORPORATE_FAQ = [
   {
-    question: 'Do you offer hourly business rates?',
-    answer: 'Yes! We offer flexible hourly rates starting at €85–€95/hour, perfect for multi-stop business itineraries, meetings, and events. Contact us for custom quotes.',
+    question: 'What is included in the hourly disposal rate?',
+    answer: 'The hourly rate covers vehicle, chauffeur, fuel, insurance, and standard wait time. Minimum 3 hours. Parking fees and tolls are itemized separately on the invoice.',
   },
   {
-    question: 'Can you accommodate last-minute bookings?',
-    answer: 'Absolutely. We can often arrange same-day pickups depending on vehicle availability. Call +31 20 308 6885 for instant confirmation.',
+    question: 'Can we book multiple vehicles for a large roadshow?',
+    answer: 'Yes. We coordinate multiple vehicles with a lead dispatcher for large roadshows. Contact us to plan your fleet and routing.',
   },
   {
-    question: 'Are your drivers familiar with the Amsterdam business district?',
-    answer: "Yes, all drivers are knowledgeable about Amsterdam's business areas and can navigate efficiently to corporate offices, hotels, and meeting venues.",
+    question: 'Do you provide corporate accounts and invoicing?',
+    answer: 'Yes. We offer consolidated monthly invoicing with VAT breakdown, ride-level detail, and cost-center tagging. Terms: net 14 days.',
   },
 ]
 
-export default function BusinessTaxi() {
+export default function CorporateRoadshows() {
   return (
     <main className="flex flex-col">
       {/* Breadcrumb */}
-      <div className="bg-gray-50 border-b border-gray-200 py-3 px-4 md:px-6">
+      <div className="bg-[#F5F5F5] border-b border-gray-200 py-4 px-4 md:px-6">
         <div className="container mx-auto">
           <div className="flex items-center gap-2 text-sm text-gray-600">
             <Link href="/" className="text-primary hover:underline">
               Home
             </Link>
             <span>/</span>
-            <span className="text-gray-900 font-semibold">Business Taxi</span>
+            <span className="text-gray-900 font-semibold">Corporate Roadshows</span>
           </div>
         </div>
       </div>
 
       {/* Hero */}
-      <section className="bg-gradient-to-r from-primary to-blue-600 text-white py-12 md:py-20">
+      <section className="bg-[#0D141C] text-white py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-              Professional Business Taxi Amsterdam
+              Corporate Roadshow
+              <br />
+              <span className="text-amber-400">Disposal Service</span>
             </h1>
-            <p className="text-lg md:text-xl text-blue-100 mb-8">
-              Reliable, punctual corporate transportation for business meetings, events, and airport transfers. Flexible hourly rates and premium vehicles.
+            <p className="text-lg md:text-xl text-gray-300 mb-8">
+              Dedicated vehicle and chauffeur for your executive schedule across Amsterdam, Zuidas, RAI, and Randstad.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
+              <a
                 href="/booking"
-                className="inline-block bg-secondary hover:bg-orange-600 text-primary font-bold py-3 px-6 rounded-lg transition text-center"
+                className="bg-amber-500 hover:bg-amber-600 text-[#0D141C] font-bold py-4 px-8 rounded-lg text-lg transition transform hover:scale-105 active:scale-95 inline-block text-center"
               >
-                Book Business Transfer
-              </Link>
-              <Link
-                href="/quote"
-                className="inline-block bg-white hover:bg-blue-50 text-primary font-bold py-3 px-6 rounded-lg transition text-center"
+                Book Roadshow
+              </a>
+              <a
+                href="tel:+31203086885"
+                className="border border-gray-600 hover:border-amber-400 hover:text-amber-400 text-white font-bold py-4 px-8 rounded-lg text-lg transition inline-block text-center"
               >
-                Request Quote
-              </Link>
+                Request Corporate Quote
+              </a>
             </div>
           </div>
         </div>
       </section>
 
       {/* Service Details */}
-      <section className="py-12 md:py-16 bg-white">
+      <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
             <div>
               <h2 className="text-3xl font-bold mb-6 text-gray-900">
-                Punctuality & Professionalism
+                Your Schedule, Our Priority
               </h2>
 
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start gap-4">
-                  <svg className="w-6 h-6 text-secondary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
+                  <div className="w-6 h-6 flex items-center justify-center bg-primary text-white rounded-full flex-shrink-0 mt-1">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
                   <div>
-                    <p className="font-semibold text-gray-900">On-Time Guarantee</p>
-                    <p className="text-gray-600">We understand the importance of punctuality for business. Arrive early, leave on time.</p>
+                    <p className="font-semibold text-gray-900">Dedicated Driver & Vehicle</p>
+                    <p className="text-gray-600">One chauffeur, one vehicle for your full roadshow</p>
                   </div>
                 </li>
 
                 <li className="flex items-start gap-4">
-                  <svg className="w-6 h-6 text-secondary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
+                  <div className="w-6 h-6 flex items-center justify-center bg-primary text-white rounded-full flex-shrink-0 mt-1">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
                   <div>
-                    <p className="font-semibold text-gray-900">Professional Fleet</p>
-                    <p className="text-gray-600">Premium, well-maintained vehicles perfect for client meetings and executive travel</p>
+                    <p className="font-semibold text-gray-900">Real-Time Schedule Adjustments</p>
+                    <p className="text-gray-600">Last-minute meeting changes? Our dispatcher handles it</p>
                   </div>
                 </li>
 
                 <li className="flex items-start gap-4">
-                  <svg className="w-6 h-6 text-secondary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
+                  <div className="w-6 h-6 flex items-center justify-center bg-primary text-white rounded-full flex-shrink-0 mt-1">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
                   <div>
-                    <p className="font-semibold text-gray-900">Courteous Drivers</p>
-                    <p className="text-gray-600">Professional, trained drivers who maintain discretion and high service standards</p>
+                    <p className="font-semibold text-gray-900">Monthly Consolidated Invoicing</p>
+                    <p className="text-gray-600">VAT breakdown, ride-level detail, cost-center tagging</p>
                   </div>
                 </li>
 
                 <li className="flex items-start gap-4">
-                  <svg className="w-6 h-6 text-secondary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
+                  <div className="w-6 h-6 flex items-center justify-center bg-primary text-white rounded-full flex-shrink-0 mt-1">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
                   <div>
-                    <p className="font-semibold text-gray-900">Flexible Scheduling</p>
-                    <p className="text-gray-600">Hourly rates for multi-stop itineraries, meetings, and flexible business needs</p>
+                    <p className="font-semibold text-gray-900">Discretion Guaranteed</p>
+                    <p className="text-gray-600">Unbranded vehicles, business-attire drivers, no ride data shared</p>
                   </div>
                 </li>
               </ul>
 
-              <Link
+              <a
                 href="/booking"
-                className="inline-block bg-primary hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition"
+                className="bg-primary hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg transition inline-block"
               >
-                Book Now
-              </Link>
+                Book Roadshow
+              </a>
             </div>
 
-            <div className="bg-blue-50 rounded-lg p-8 border-2 border-primary">
+            <div className="bg-[#F5F5F5] border border-gray-200 rounded-lg p-8">
               <h3 className="text-2xl font-bold text-primary mb-6">
-                Pricing
+                Corporate Disposal Pricing
               </h3>
               <div className="space-y-4 mb-6">
                 <div>
                   <p className="font-semibold text-gray-900">Hourly Rate</p>
-                  <p className="text-2xl font-bold text-primary">€85–€95</p>
-                  <p className="text-sm text-gray-600">Flexible business transportation</p>
+                  <p className="text-2xl font-bold text-primary">€95–€125/hr</p>
+                  <p className="text-sm text-gray-600">Minimum 3 hours</p>
                 </div>
-                <div className="border-t border-blue-200 pt-4">
-                  <p className="font-semibold text-gray-900">Airport Transfer</p>
-                  <p className="text-2xl font-bold text-primary">€40–€50</p>
-                  <p className="text-sm text-gray-600">Fixed price to/from Schiphol</p>
+                <div className="border-t border-gray-200 pt-4">
+                  <p className="font-semibold text-gray-900">Half-Day Disposal</p>
+                  <p className="text-2xl font-bold text-primary">€380–€480</p>
+                  <p className="text-sm text-gray-600">4 hours — meetings, client visits</p>
+                </div>
+                <div className="border-t border-gray-200 pt-4">
+                  <p className="font-semibold text-gray-900">Full-Day Disposal</p>
+                  <p className="text-2xl font-bold text-primary">€650–€850</p>
+                  <p className="text-sm text-gray-600">8 hours — conferences, events</p>
                 </div>
               </div>
               <p className="text-sm text-gray-600">
-                💼 <strong>Corporate accounts</strong> available. Call for custom rates.
+                💼 <strong>Corporate accounts</strong> available. Net 14 terms.{' '}
+                <Link href="/booking" className="text-primary hover:underline">Contact us to set up</Link>.
               </p>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Proof Signals */}
+      <ProofSignals />
+
       {/* FAQ */}
-      <FAQAccordion items={BUSINESS_FAQ} />
+      <FAQAccordion items={CORPORATE_FAQ} />
 
       {/* CTA */}
       <CTAFooter />
@@ -168,18 +190,18 @@ export default function BusinessTaxi() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Service',
-            name: 'Business Taxi Amsterdam',
+            name: 'Corporate Roadshow Executive Disposal',
             provider: {
               '@type': 'LocalBusiness',
               name: 'Dutch Taxi Transfers',
-              telephone: '+31 20 308 6885',
+              telephone: '+31-20-308-6885',
             },
-            areaServed: 'Amsterdam',
-            description: 'Professional, reliable business taxi and corporate transfer service in Amsterdam',
+            areaServed: ['Amsterdam', 'Zuidas', 'Randstad'],
+            description: 'Executive hourly disposal service for corporate roadshows across Amsterdam and Randstad',
             offers: {
               '@type': 'Offer',
               priceCurrency: 'EUR',
-              price: '85-95',
+              price: '95-125',
               url: 'https://dutchtaxitransfers.nl/business-taxi-amsterdam',
             },
           }),

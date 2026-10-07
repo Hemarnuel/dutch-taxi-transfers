@@ -17,14 +17,14 @@ export default function FAQAccordion({ items }: FAQAccordionProps) {
   const faqItems = items || FAQ_ITEMS
 
   return (
-    <section className="bg-gray-50 py-12 md:py-16">
+    <section className="bg-[#F5F5F5] py-16 md:py-20">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">
-            Frequently Asked Questions
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+            Corporate Transport FAQ
           </h2>
           <p className="text-gray-600 mb-12 text-lg">
-            Get answers to the most common questions about our airport transfer and taxi services.
+            Answers to the questions business travelers ask about our executive chauffeur service.
           </p>
 
           <div className="space-y-3">
@@ -53,7 +53,7 @@ export default function FAQAccordion({ items }: FAQAccordionProps) {
                 </button>
 
                 {openIndex === idx && (
-                  <div className="px-6 py-4 bg-blue-50 border-t border-gray-200">
+                  <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
                     <p className="text-gray-700 leading-relaxed">{item.answer}</p>
                   </div>
                 )}

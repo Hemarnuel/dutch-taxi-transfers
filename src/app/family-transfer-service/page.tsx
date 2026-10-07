@@ -1,174 +1,194 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import CTAFooter from '@/components/CTAFooter'
+import HeroTrust from '@/components/HeroTrust'
+import ProofSignals from '@/components/ProofSignals'
+import PricingTransparency from '@/components/PricingTransparency'
 import FAQAccordion from '@/components/FAQAccordion'
+import CTAFooter from '@/components/CTAFooter'
 
 export const metadata: Metadata = {
-  title: 'Family Transfer Service Amsterdam | Safe, Convenient Group Transport',
-  description: 'Family-friendly transfer service in Amsterdam with child safety features, group capacity, and easy booking. Perfect for families and tourists.',
-  keywords: 'family transfer amsterdam, group taxi, tourist transfer, family transport',
+  title: 'Executive Van Transport Amsterdam | Mercedes V-Class Chauffeur Service',
+  description: 'Mercedes V-Class executive van for groups of 4-6. Conference seating, privacy partition, Wi-Fi, refreshments. Perfect for corporate roadshows and VIP delegations.',
+  keywords: 'executive van Amsterdam, V-Class chauffeur, group transport Amsterdam, business van service',
   alternates: {
     canonical: 'https://dutchtaxitransfers.nl/family-transfer-service',
   },
 }
 
-const FAMILY_FAQ = [
+const VAN_FAQ = [
   {
-    question: 'Do you have child safety features in your vehicles?',
-    answer: 'Yes, our vehicles include appropriate safety equipment for children. Please let us know the age of your children when booking so we can prepare accordingly.',
+    question: 'How many passengers can the V-Class accommodate?',
+    answer: 'The Mercedes V-Class seats 6 passengers in executive conference seating with a privacy partition. Luggage capacity: 6 large bags + 4 carry-on bags.',
   },
   {
-    question: 'How many passengers can you accommodate?',
-    answer: 'Our standard vehicles seat up to 4 passengers. For larger groups (5–8 people), we offer mini-coach options. Contact us to confirm capacity for your group size.',
+    question: 'Is Wi-Fi available in the V-Class?',
+    answer: 'Yes. Every V-Class is equipped with 4G/5G mobile Wi-Fi with unlimited data for passenger use.',
   },
   {
-    question: 'Are your drivers kid-friendly?',
-    answer: 'Absolutely! Our drivers are experienced with families and children, and they are patient and friendly. Your children will feel safe and comfortable.',
+    question: 'Can we use the V-Class for corporate meetings on the road?',
+    answer: 'Yes. The V-Class features executive conference seating, work tables, and privacy partition — ideal for productive roadshow travel.',
   },
   {
-    question: 'Can we make stops during the transfer?',
-    answer: 'Yes! We can arrange stops along your route for a small additional fee. Perfect for picking up supplies or visiting attractions en route.',
+    question: 'Is the V-Class available for airport transfers and events?',
+    answer: 'Yes. The V-Class is available for Schiphol transfers, corporate roadshows, and event transport. It is our most versatile vehicle.',
   },
 ]
 
-export default function FamilyTransfer() {
+export default function VanTransport() {
   return (
     <main className="flex flex-col">
       {/* Breadcrumb */}
-      <div className="bg-gray-50 border-b border-gray-200 py-3 px-4 md:px-6">
+      <div className="bg-[#F5F5F5] border-b border-gray-200 py-4 px-4 md:px-6">
         <div className="container mx-auto">
           <div className="flex items-center gap-2 text-sm text-gray-600">
             <Link href="/" className="text-primary hover:underline">
               Home
             </Link>
             <span>/</span>
-            <span className="text-gray-900 font-semibold">Family Transfer</span>
+            <span className="text-gray-900 font-semibold">Executive Van Transport</span>
           </div>
         </div>
       </div>
 
       {/* Hero */}
-      <section className="bg-gradient-to-r from-primary to-blue-600 text-white py-12 md:py-20">
+      <section className="bg-[#0D141C] text-white py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-              Family-Friendly Transport in Amsterdam
+              Executive Van
+              <br />
+              <span className="text-amber-400">Transport Service</span>
             </h1>
-            <p className="text-lg md:text-xl text-blue-100 mb-8">
-              Comfortable, safe transfer service for families and groups. Child-friendly vehicles, experienced drivers, and flexible booking. Perfect for holiday arrivals and city tours.
+            <p className="text-lg md:text-xl text-gray-300 mb-8">
+              Mercedes V-Class for groups of 4-6. Conference seating, privacy partition,
+              Wi-Fi, refreshments. The ultimate business travel vehicle.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-secondary hover:bg-orange-600 text-primary font-bold py-3 px-6 rounded-lg transition">
-                Book Family Transfer
-              </button>
-              <button className="bg-white hover:bg-blue-50 text-primary font-bold py-3 px-6 rounded-lg transition">
-                Get Group Quote
-              </button>
+              <a
+                href="/booking"
+                className="bg-amber-500 hover:bg-amber-600 text-[#0D141C] font-bold py-4 px-8 rounded-lg text-lg transition transform hover:scale-105 active:scale-95 inline-block text-center"
+              >
+                Book Your V-Class
+              </a>
+              <a
+                href="tel:+31203086885"
+                className="border border-gray-600 hover:border-amber-400 hover:text-amber-400 text-white font-bold py-4 px-8 rounded-lg text-lg transition inline-block text-center"
+              >
+                Get Fixed Price Quote
+              </a>
             </div>
           </div>
         </div>
       </section>
 
       {/* Service Details */}
-      <section className="py-12 md:py-16 bg-white">
+      <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
             <div>
               <h2 className="text-3xl font-bold mb-6 text-gray-900">
-                Designed for Family Travel
+                The Ultimate Business Travel Vehicle
               </h2>
 
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start gap-4">
-                  <svg className="w-6 h-6 text-secondary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
+                  <div className="w-6 h-6 flex items-center justify-center bg-primary text-white rounded-full flex-shrink-0 mt-1">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
                   <div>
-                    <p className="font-semibold text-gray-900">Child Safety Features</p>
-                    <p className="text-gray-600">Vehicles equipped with child seats and safety restraints</p>
+                    <p className="font-semibold text-gray-900">Executive Conference Seating</p>
+                    <p className="text-gray-600">6 passengers, work tables, privacy partition</p>
                   </div>
                 </li>
 
                 <li className="flex items-start gap-4">
-                  <svg className="w-6 h-6 text-secondary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
+                  <div className="w-6 h-6 flex items-center justify-center bg-primary text-white rounded-full flex-shrink-0 mt-1">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
                   <div>
-                    <p className="font-semibold text-gray-900">Spacious & Comfortable</p>
-                    <p className="text-gray-600">Plenty of legroom and luggage space for family gear and souvenirs</p>
+                    <p className="font-semibold text-gray-900">4G/5G Mobile Wi-Fi</p>
+                    <p className="text-gray-600">Unlimited data for passenger use</p>
                   </div>
                 </li>
 
                 <li className="flex items-start gap-4">
-                  <svg className="w-6 h-6 text-secondary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
+                  <div className="w-6 h-6 flex items-center justify-center bg-primary text-white rounded-full flex-shrink-0 mt-1">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
                   <div>
-                    <p className="font-semibold text-gray-900">Kid-Friendly Drivers</p>
-                    <p className="text-gray-600">Patient, experienced drivers who are great with children</p>
+                    <p className="font-semibold text-gray-900">Refreshments & Ambiance</p>
+                    <p className="text-gray-600">Bottled water, phone chargers, ambient lighting</p>
                   </div>
                 </li>
 
                 <li className="flex items-start gap-4">
-                  <svg className="w-6 h-6 text-secondary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
+                  <div className="w-6 h-6 flex items-center justify-center bg-primary text-white rounded-full flex-shrink-0 mt-1">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
                   <div>
-                    <p className="font-semibold text-gray-900">Flexible & Convenient</p>
-                    <p className="text-gray-600">Stop en route for supplies or sightseeing at no extra charge</p>
+                    <p className="font-semibold text-gray-900">6 Large Bags + 4 Carry-On</p>
+                    <p className="text-gray-600">Ample luggage space for business travelers</p>
                   </div>
                 </li>
               </ul>
 
-              <button className="bg-primary hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition">
-                Reserve Your Family Transfer
-              </button>
+              <a
+                href="/booking"
+                className="bg-primary hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg transition inline-block"
+              >
+                Book Your V-Class
+              </a>
             </div>
 
-            <div className="bg-blue-50 rounded-lg p-8 border-2 border-primary">
+            <div className="bg-[#F5F5F5] border border-gray-200 rounded-lg p-8">
               <h3 className="text-2xl font-bold text-primary mb-6">
-                Simple Booking
+                V-Class Features
               </h3>
-              <ol className="space-y-4">
-                <li className="flex gap-4">
-                  <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white font-bold flex-shrink-0">
-                    1
-                  </div>
-                  <div>
-                    <p className="font-semibold text-gray-900">Tell Us Your Party Size</p>
-                    <p className="text-sm text-gray-600">Adults and children</p>
-                  </div>
-                </li>
-                <li className="flex gap-4">
-                  <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white font-bold flex-shrink-0">
-                    2
-                  </div>
-                  <div>
-                    <p className="font-semibold text-gray-900">Choose Your Route</p>
-                    <p className="text-sm text-gray-600">Airport, hotel, attractions</p>
-                  </div>
-                </li>
-                <li className="flex gap-4">
-                  <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white font-bold flex-shrink-0">
-                    3
-                  </div>
-                  <div>
-                    <p className="font-semibold text-gray-900">Confirm & Relax</p>
-                    <p className="text-sm text-gray-600">We handle the rest</p>
-                  </div>
-                </li>
-              </ol>
-              <p className="text-sm text-gray-600 mt-6">
-                👨‍👩‍👧‍👦 <strong>Group discount</strong> available for bookings of 6+
+              <div className="space-y-4 mb-6">
+                <div className="flex items-center justify-between pb-3 border-b border-gray-200">
+                  <span className="font-semibold text-gray-900">Passenger Capacity</span>
+                  <span className="text-gray-600">6 seats</span>
+                </div>
+                <div className="flex items-center justify-between pb-3 border-b border-gray-200">
+                  <span className="font-semibold text-gray-900">Luggage Capacity</span>
+                  <span className="text-gray-600">6 large + 4 carry-on</span>
+                </div>
+                <div className="flex items-center justify-between pb-3 border-b border-gray-200">
+                  <span className="font-semibold text-gray-900">Wi-Fi</span>
+                  <span className="text-gray-600">4G/5G, unlimited data</span>
+                </div>
+                <div className="flex items-center justify-between pb-3 border-b border-gray-200">
+                  <span className="font-semibold text-gray-900">Conference Seating</span>
+                  <span className="text-gray-600">Work tables, privacy partition</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="font-semibold text-gray-900">Ideal For</span>
+                  <span className="text-gray-600">Roadshows, delegations, VIPs</span>
+                </div>
+              </div>
+              <p className="text-sm text-gray-600">
+                💼 <strong>Corporate accounts</strong> available with consolidated invoicing.{' '}
+                <Link href="/booking" className="text-primary hover:underline">Contact us</Link>.
               </p>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Proof Signals */}
+      <ProofSignals />
+
       {/* FAQ */}
-      <FAQAccordion items={FAMILY_FAQ} />
+      <FAQAccordion items={VAN_FAQ} />
 
       {/* CTA */}
       <CTAFooter />
@@ -180,14 +200,14 @@ export default function FamilyTransfer() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Service',
-            name: 'Family Transfer Service Amsterdam',
+            name: 'Executive Van Transport Amsterdam',
             provider: {
               '@type': 'LocalBusiness',
               name: 'Dutch Taxi Transfers',
-              telephone: '+31 20 308 6885',
+              telephone: '+31-20-308-6885',
             },
-            areaServed: 'Amsterdam',
-            description: 'Family-friendly transfer and taxi service with child safety features and group capacity',
+            areaServed: ['Amsterdam', 'Zuidas', 'RAI', 'Randstad'],
+            description: 'Mercedes V-Class executive van transport for groups of 4-6 with conference seating and Wi-Fi',
             offers: {
               '@type': 'Offer',
               priceCurrency: 'EUR',

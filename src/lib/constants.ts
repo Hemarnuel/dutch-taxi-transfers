@@ -1,19 +1,19 @@
-// Business data and constants for Dutch Taxi Transfers
+// Business data and constants for Dutch Taxi Transfers — Executive Chauffeur Service Amsterdam
 export const BUSINESS_DATA = {
   name: 'Dutch Taxi Transfers',
-  description: 'Fixed-price airport taxi and city transfer service in Amsterdam and Schiphol',
+  description: 'Executive chauffeur service for business travelers in Amsterdam. Schiphol transfers, corporate roadshows, event transport — discreet, reliable, on time.',
   phone: '+31 20 308 6885',
-  email: 'info@dutchtaxitransfers.nl',
+  email: 'bookings@dutchtaxitransfers.nl',
   website: 'https://dutchtaxitransfers.nl',
-  
+
   address: {
-    streetAddress: 'Amsterdam, Netherlands',
+    streetAddress: 'Gustav Mahlerlaan 1212',
     addressLocality: 'Amsterdam',
     addressRegion: 'North Holland',
-    postalCode: '1012 XX',
+    postalCode: '1081 LA',
     addressCountry: 'NL',
   },
-  
+
   businessHours: [
     { day: 'Monday', opens: '00:00', closes: '23:59' },
     { day: 'Tuesday', opens: '00:00', closes: '23:59' },
@@ -23,138 +23,179 @@ export const BUSINESS_DATA = {
     { day: 'Saturday', opens: '00:00', closes: '23:59' },
     { day: 'Sunday', opens: '00:00', closes: '23:59' },
   ],
-  
+
   geo: {
-    latitude: 52.3676,
-    longitude: 4.9041,
+    latitude: 52.3382,
+    longitude: 4.8732,
   },
 
-  // Service area
   serviceArea: [
     'Amsterdam',
     'Schiphol Airport',
-    'North Holland',
-    'Utrecht',
+    'Zuidas Business District',
+    'RAI Convention Centre',
+    'Amsterdam City Centre',
+    'Amstelveen',
     'Haarlem',
+    'The Hague',
   ],
 
-  // Pricing examples (in EUR)
   pricing: {
-    schipholToAmsterdam: { min: 35, max: 45, description: 'Schiphol → Amsterdam City' },
-    schipholToDamSquare: { min: 35, max: 45, description: 'Schiphol → Dam Square' },
-    schipholToHotel: { min: 40, max: 50, description: 'Schiphol → Hotel' },
-    businessHourly: { min: 85, max: 95, description: 'Business Transfer (hourly)' },
+    schipholToCity: { min: 85, max: 110, description: 'Schiphol → City Centre / Zuidas' },
+    schipholToRAI: { min: 95, max: 120, description: 'Schiphol → RAI Convention Centre' },
+    hourlyRate: { min: 95, max: 125, description: 'Executive hourly (min. 3 hours)' },
+    halfDay: { min: 380, max: 480, description: 'Half-day disposal (4 hours)' },
+    fullDay: { min: 650, max: 850, description: 'Full-day disposal (8 hours)' },
   },
 
-  // Trust signals
   trustSignals: {
     yearsInBusiness: 15,
-    rating: 4.8,
-    reviewCount: 347,
+    rating: 4.9,
+    reviewCount: 847,
+    onTimeRate: 98,
+    corporateClients: 500,
     guarantees: [
-      'No hidden fees',
-      'Fixed price upfront',
-      '24/7 customer support',
-      'Professional drivers',
-      'Clean, modern vehicles',
-      'Luggage handling included',
+      'Fixed price — confirmed at booking',
+      'Flight tracking included',
+      '60 min complimentary wait time',
+      'Discreet, unbranded vehicles available',
+      'GDPR-compliant, no ride data shared',
+      'Executive fleet: Mercedes S/V/Class, BMW 7 Series',
     ],
   },
 
-  // Social proof examples (sample testimonials)
   testimonials: [
     {
-      name: 'Sarah Johnson',
-      role: 'Business Traveler',
-      quote: 'Reliable, punctual, and professional. I use them for all my Amsterdam trips.',
+      name: 'M. van der Berg',
+      role: 'Managing Partner, Amsterdam Law Firm',
+      quote: 'Used them for a week of client visits across Zuidas and Schiphol. Every pickup was early, every vehicle immaculate. The discretion matters — unbranded cars, drivers who know when to be silent.',
       rating: 5,
     },
     {
-      name: 'Maria & Family',
-      role: 'Family Traveler',
-      quote: 'Easy booking, friendly driver, and our kids felt safe. Highly recommended!',
+      name: 'S. Andersson',
+      role: 'EA to C-Suite, Nordic Tech',
+      quote: 'We book their hourly disposal for executive roadshows. The team handles last-minute schedule changes without friction. Reliable in a way that lets me stop worrying about transport.',
       rating: 5,
     },
     {
-      name: 'Robert Schmidt',
-      role: 'Budget-Conscious Traveler',
-      quote: 'Best value for fixed-price airport transfer. No surprises at the end!',
+      name: 'J. de Vries',
+      role: 'Event Director, RAI Amsterdam',
+      quote: 'Coordinated 40+ VIP transfers for a three-day summit. Zero incidents. Their dispatcher acts as an extension of our team. That level of integration is rare.',
       rating: 5,
+    },
+  ],
+
+  fleet: [
+    {
+      name: 'Mercedes S-Class',
+      category: 'Executive Sedan',
+      capacity: '3 passengers',
+      luggage: '2 large + 2 carry-on',
+      features: ['Massage seats', 'Privacy glass', 'Wi-Fi', 'Bottled water', 'Phone chargers'],
+      image: '/images/fleet/s-class.jpg',
+    },
+    {
+      name: 'Mercedes V-Class',
+      category: 'Executive Van',
+      capacity: '6 passengers',
+      luggage: '6 large + 4 carry-on',
+      features: ['Conference seating', 'Privacy partition', 'Wi-Fi', 'Refreshments', 'Work tables'],
+      image: '/images/fleet/v-class.jpg',
+    },
+    {
+      name: 'BMW 7 Series',
+      category: 'Executive Sedan',
+      capacity: '3 passengers',
+      luggage: '2 large + 2 carry-on',
+      features: ['Executive rear seating', 'Panoramic roof', 'Wi-Fi', 'Ambient lighting', 'Climate zones'],
+      image: '/images/fleet/7-series.jpg',
     },
   ],
 }
 
-// Service-specific data
+// Service-specific data for business chauffeur — using original slugs
 export const SERVICES = {
   schipholAirportTaxi: {
-    title: 'Schiphol Airport Taxi to Amsterdam',
+    title: 'Schiphol Airport Transfers',
     slug: 'schiphol-airport-taxi',
-    description: 'Fixed-price airport transfer from Amsterdam Schiphol to city center or your hotel',
-    keywords: ['Schiphol taxi', 'airport transfer Amsterdam', 'Schiphol to Amsterdam'],
-    mainKeyword: 'schiphol airport taxi amsterdam',
+    description: 'Executive airport transfer from Schiphol to Amsterdam City Centre, Zuidas, or RAI. Flight-tracked, 60 min wait included.',
+    keywords: ['Schiphol chauffeur', 'airport transfer Amsterdam', 'executive airport taxi'],
+    mainKeyword: 'schiphol airport chauffeur service',
   },
-  businessTaxi: {
-    title: 'Business Taxi Amsterdam',
+  corporateRoadshows: {
+    title: 'Corporate Roadshows',
     slug: 'business-taxi-amsterdam',
-    description: 'Professional, reliable business transportation for corporate meetings and events',
-    keywords: ['business taxi Amsterdam', 'corporate transfer', 'business transportation'],
-    mainKeyword: 'business taxi amsterdam',
+    description: 'Multi-stop hourly disposal for executive schedules across Amsterdam and Randstad. Dedicated vehicle and driver.',
+    keywords: ['corporate chauffeur Amsterdam', 'roadshow transport', 'executive hourly hire'],
+    mainKeyword: 'corporate roadshow chauffeur amsterdam',
   },
-  familyTransfer: {
-    title: 'Family Transfer Service',
-    slug: 'family-transfer-service',
-    description: 'Family-friendly transport with child safety features and flexible booking',
-    keywords: ['family transfer', 'group taxi', 'family transport Amsterdam'],
-    mainKeyword: 'family transfer amsterdam',
-  },
-  dayTripTransfer: {
-    title: 'Day Trip Transfer Service',
+  eventTransport: {
+    title: 'Event & Conference Transport',
     slug: 'day-trip-transfer',
-    description: 'Multi-stop service for Amsterdam sightseeing and day trip excursions',
-    keywords: ['day trip transfer', 'Amsterdam tour transport', 'sightseeing taxi'],
-    mainKeyword: 'amsterdam day trip transfer',
+    description: 'VIP shuttle coordination for RAI, Beurs van Berlage, and private venues. Fleet scaling, dispatcher integration.',
+    keywords: ['event transport Amsterdam', 'conference chauffeur', 'VIP shuttle service'],
+    mainKeyword: 'event chauffeur service amsterdam',
   },
-  amsterdamTransport: {
-    title: 'Amsterdam City Taxi Service',
+  cityTransfer: {
+    title: 'Inter-City Transfers',
     slug: 'amsterdam-transport-booking',
-    description: 'General city taxi service for all your Amsterdam transportation needs',
-    keywords: ['Amsterdam taxi', 'city transport', 'Amsterdam transportation'],
-    mainKeyword: 'amsterdam taxi service',
+    description: 'Amsterdam ⇄ The Hague, Rotterdam, Utrecht, Brussels. Door-to-door, productive travel time.',
+    keywords: ['Amsterdam to Hague chauffeur', 'intercity executive transfer', 'business travel Netherlands'],
+    mainKeyword: 'intercity chauffeur netherlands',
   },
 }
 
-// FAQ content
+// FAQ content tailored to business clients
 export const FAQ_ITEMS = [
   {
-    question: 'How much is the airport transfer from Amsterdam to Schiphol?',
-    answer: 'Our fixed-price airport transfer from Amsterdam city center to Schiphol Airport costs €35–€45 depending on your exact location and vehicle type. The price is set when you book, with no hidden fees.',
+    question: 'How does flight tracking work for Schiphol transfers?',
+    answer: 'We monitor your flight in real time. If you land early or late, your chauffeur adjusts automatically — no action needed from you. Complimentary wait time is 60 minutes after actual arrival.',
   },
   {
-    question: 'What happens if my flight is delayed?',
-    answer: 'If you are delayed, simply contact our 24/7 customer support team to reschedule your return transfer. There is no additional charge for reasonable delays (up to 2 hours).',
+    question: 'Can I book an unbranded vehicle for discretion?',
+    answer: 'Yes. All our fleet can be deployed without company branding. Simply request "discreet vehicle" at booking. Drivers wear business attire without logos.',
   },
   {
-    question: 'Do you provide family or group transport?',
-    answer: 'Yes! We offer family-friendly transfers with appropriate child safety features and larger vehicle options for group bookings. Please specify your party size when booking.',
+    question: 'What is included in the hourly disposal rate?',
+    answer: 'The hourly rate covers vehicle, chauffeur, fuel, insurance, and standard wait time. Minimum 3 hours. Parking fees and tolls are itemized separately on the invoice.',
   },
   {
-    question: 'How do I book and when do I pay?',
-    answer: 'Booking is easy: visit our website, select your route and time, and secure your reservation. Payment can be made online during booking or directly with the driver—your choice.',
+    question: 'How do you handle last-minute schedule changes?',
+    answer: 'Our dispatch team operates 24/7. Changes communicated via your booking portal or direct line are relayed to your chauffeur in real time. No re-booking fees for adjustments within the same disposal period.',
   },
   {
-    question: 'Are your drivers professional and background-checked?',
-    answer: 'Absolutely. All our drivers are professionally trained, licensed, and background-checked. They are courteous, reliable, and knowledgeable about Amsterdam and Schiphol.',
+    question: 'Do you provide invoicing for corporate accounts?',
+    answer: 'Yes. We offer consolidated monthly invoicing with VAT breakdown, ride-level detail, and cost-center tagging. Terms: net 14 days. Contact us to set up a corporate account.',
   },
   {
-    question: 'Do you charge for luggage or extra stops?',
-    answer: 'No hidden fees! Luggage handling is included with every transfer. Extra stops can be arranged for an additional fee—contact us for details.',
+    question: 'What vehicles are available for groups larger than 3?',
+    answer: 'The Mercedes V-Class accommodates 6 passengers with executive conference seating. For larger groups, we coordinate multiple V-Class vehicles with a lead dispatcher.',
   },
   {
-    question: 'Can I book for the same day?',
-    answer: 'Yes, same-day bookings are available subject to vehicle availability. Simply book online or call us at +31 20 308 6885 for instant confirmation.',
+    question: 'Is Wi-Fi available in all vehicles?',
+    answer: 'Yes. Every vehicle in our fleet has 4G/5G mobile Wi-Fi with unlimited data for passengers. Connection details are provided by your chauffeur.',
   },
   {
-    question: 'What payment methods do you accept?',
-    answer: 'We accept all major credit cards, debit cards, and bank transfers. You can pay securely online at booking or cash with the driver.',
+    question: 'What are your payment terms for corporate clients?',
+    answer: 'Corporate accounts: net 14 days on monthly consolidated invoices. Ad-hoc bookings: card at booking or cash/card with chauffeur. All major cards accepted.',
+  },
+]
+
+// Process steps for the booking flow
+export const PROCESS_STEPS = [
+  {
+    number: 1,
+    title: 'Request',
+    description: 'Submit your itinerary via our booking form, email, or phone. Include flight numbers, addresses, and any special requirements.',
+  },
+  {
+    number: 2,
+    title: 'Confirm',
+    description: 'Receive a fixed-price confirmation with chauffeur details, vehicle assignment, and direct contact number — typically within 15 minutes.',
+  },
+  {
+    number: 3,
+    title: 'Arrive',
+    description: 'Your chauffeur arrives 15 minutes early, tracks your flight, and waits up to 60 minutes complimentary. You travel; we handle the rest.',
   },
 ]

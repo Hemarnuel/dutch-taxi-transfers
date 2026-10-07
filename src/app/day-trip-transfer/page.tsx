@@ -1,5 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import HeroTrust from '@/components/HeroTrust'
+import ProofSignals from '@/components/ProofSignals'
+import PricingTransparency from '@/components/PricingTransparency'
+import FAQAccordion from '@/components/FAQAccordion'
 import CTAFooter from '@/components/CTAFooter'
 
 export const metadata: Metadata = {
@@ -15,7 +19,7 @@ export default function DayTripTransfer() {
   return (
     <main className="flex flex-col">
       {/* Breadcrumb */}
-      <div className="bg-gray-50 border-b border-gray-200 py-3 px-4 md:px-6">
+      <div className="bg-[#F5F5F5] border-b border-gray-200 py-4 px-4 md:px-6">
         <div className="container mx-auto">
           <div className="flex items-center gap-2 text-sm text-gray-600">
             <Link href="/" className="text-primary hover:underline">
@@ -28,36 +32,38 @@ export default function DayTripTransfer() {
       </div>
 
       {/* Hero */}
-      <section className="bg-gradient-to-r from-primary to-blue-600 text-white py-12 md:py-20">
+      <section className="bg-[#0D141C] text-white py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-              Amsterdam Day Trip & Sightseeing Transport
+              Amsterdam Day Trip &amp;
+              <br />
+              <span className="text-amber-400">Sightseeing Transport</span>
             </h1>
-            <p className="text-lg md:text-xl text-blue-100 mb-8">
+            <p className="text-lg md:text-xl text-gray-300 mb-8">
               Multi-stop transfer service for Amsterdam sightseeing and day trips. Flexible hours, comfortable vehicles, and professional drivers who know the city.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
+              <a
                 href="/booking"
-                className="inline-block bg-secondary hover:bg-orange-600 text-primary font-bold py-3 px-6 rounded-lg transition text-center"
+                className="bg-amber-500 hover:bg-amber-600 text-[#0D141C] font-bold py-4 px-8 rounded-lg text-lg transition transform hover:scale-105 active:scale-95 inline-block text-center"
               >
-                Book Day Trip Transfer
-              </Link>
-              <Link
-                href="/quote"
-                className="inline-block bg-white hover:bg-blue-50 text-primary font-bold py-3 px-6 rounded-lg transition text-center"
+                Book Your Transfer
+              </a>
+              <a
+                href="tel:+31203086885"
+                className="border border-gray-600 hover:border-amber-400 hover:text-amber-400 text-white font-bold py-4 px-8 rounded-lg text-lg transition inline-block text-center"
               >
                 Request Custom Itinerary
-              </Link>
+              </a>
             </div>
           </div>
         </div>
       </section>
 
       {/* Service Details */}
-      <section className="py-12 md:py-16 bg-white">
+      <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-6 text-gray-900">
@@ -122,7 +128,7 @@ export default function DayTripTransfer() {
                   </li>
                   <li className="flex items-start gap-3">
                     <svg className="w-6 h-6 text-secondary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                     <div>
                       <p className="font-semibold text-gray-900">Knowledgeable Drivers</p>
@@ -131,7 +137,7 @@ export default function DayTripTransfer() {
                   </li>
                   <li className="flex items-start gap-3">
                     <svg className="w-6 h-6 text-secondary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                     <div>
                       <p className="font-semibold text-gray-900">No Stress Driving</p>
@@ -140,7 +146,7 @@ export default function DayTripTransfer() {
                   </li>
                   <li className="flex items-start gap-3">
                     <svg className="w-6 h-6 text-secondary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                     <div>
                       <p className="font-semibold text-gray-900">Custom Itineraries</p>
@@ -152,7 +158,7 @@ export default function DayTripTransfer() {
             </div>
 
             {/* Pricing */}
-            <div className="bg-blue-50 rounded-lg p-8 border-2 border-primary mb-12">
+            <div className="bg-[#F5F5F5] border border-gray-200 rounded-lg p-8 mb-12">
               <h3 className="text-2xl font-bold text-primary mb-6">
                 Flexible Hourly Pricing
               </h3>
@@ -177,12 +183,12 @@ export default function DayTripTransfer() {
 
             {/* CTA */}
             <div className="text-center">
-              <Link
+              <a
                 href="/booking"
-                className="inline-block bg-primary hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition mb-4"
+                className="bg-primary hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg transition text-lg mb-4"
               >
                 Reserve Your Day Trip Now
-              </Link>
+              </a>
               <p className="text-gray-600">
                 Or call <strong className="text-primary">+31 20 308 6885</strong> to discuss your custom itinerary
               </p>
@@ -205,7 +211,7 @@ export default function DayTripTransfer() {
             provider: {
               '@type': 'LocalBusiness',
               name: 'Dutch Taxi Transfers',
-              telephone: '+31 20 308 6885',
+              telephone: '+31-20-308-6885',
             },
             areaServed: ['Amsterdam', 'North Holland'],
             description: 'Multi-stop transfer service for Amsterdam sightseeing and day trips',

@@ -6,7 +6,7 @@ import { BUSINESS_DATA } from './constants'
 export function generateLocalBusinessSchema() {
   return {
     '@context': 'https://schema.org',
-    '@type': ['LocalBusiness', 'TaxiService'],
+    '@type': ['LocalBusiness', 'ProfessionalService'],
     name: BUSINESS_DATA.name,
     description: BUSINESS_DATA.description,
     url: BUSINESS_DATA.website,
@@ -75,11 +75,11 @@ export function generateAirportTransferSchema() {
       '@type': 'City',
       name: 'Amsterdam',
     },
-    description: 'Fixed-price airport taxi transfer from Amsterdam Schiphol Airport to city center and hotels',
+    description: 'Executive chauffeur transfer from Amsterdam Schiphol Airport to city center, Zuidas, and RAI',
     offers: {
       '@type': 'Offer',
       priceCurrency: 'EUR',
-      price: '35-45',
+      price: '85-110',
       url: `${BUSINESS_DATA.website}/schiphol-airport-taxi`,
       availability: 'https://schema.org/InStock',
       validFrom: new Date().toISOString().split('T')[0],
