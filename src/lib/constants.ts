@@ -1,7 +1,7 @@
-// Business data and constants for Dutch Taxi Transfers — Executive Chauffeur Service Amsterdam
+// Business data and constants for Dutch Taxi Transfers — Regular Passenger Taxi Service Amsterdam
 export const BUSINESS_DATA = {
   name: 'Dutch Taxi Transfers',
-  description: 'Executive chauffeur service for business travelers in Amsterdam. Schiphol transfers, corporate roadshows, event transport — discreet, reliable, on time.',
+  description: 'Amsterdam taxi service for airport transfers, city rides, and point-to-point transport. Fixed prices, 24/7, book in seconds.',
   phone: '+31 20 308 6885',
   email: 'bookings@dutchtaxitransfers.nl',
   website: 'https://dutchtaxitransfers.nl',
@@ -32,8 +32,6 @@ export const BUSINESS_DATA = {
   serviceArea: [
     'Amsterdam',
     'Schiphol Airport',
-    'Zuidas Business District',
-    'RAI Convention Centre',
     'Amsterdam City Centre',
     'Amstelveen',
     'Haarlem',
@@ -41,143 +39,132 @@ export const BUSINESS_DATA = {
   ],
 
   pricing: {
-    schipholToCity: { min: 85, max: 110, description: 'Schiphol → City Centre / Zuidas' },
+    schipholToCity: { min: 85, max: 110, description: 'Schiphol → City Centre' },
     schipholToRAI: { min: 95, max: 120, description: 'Schiphol → RAI Convention Centre' },
-    hourlyRate: { min: 95, max: 125, description: 'Executive hourly (min. 3 hours)' },
-    halfDay: { min: 380, max: 480, description: 'Half-day disposal (4 hours)' },
-    fullDay: { min: 650, max: 850, description: 'Full-day disposal (8 hours)' },
+    cityToCity: { min: 45, max: 75, description: 'City Centre → Zuidas / RAI / Amstelveen' },
+    hourlyRate: { min: 65, max: 85, description: 'Hourly disposal (min. 2 hours)' },
   },
 
   trustSignals: {
     yearsInBusiness: 15,
-    rating: 4.9,
-    reviewCount: 847,
-    onTimeRate: 98,
-    corporateClients: 500,
+    rating: 4.8,
+    reviewCount: 1247,
+    onTimeRate: 97,
     guarantees: [
       'Fixed price — confirmed at booking',
       'Flight tracking included',
-      '60 min complimentary wait time',
-      'Discreet, unbranded vehicles available',
-      'GDPR-compliant, no ride data shared',
-      'Executive fleet: Mercedes S/V/Class, BMW 7 Series',
+      '45 min complimentary wait time',
+      'Clean, modern fleet',
+      '24/7 customer support',
     ],
   },
 
   testimonials: [
     {
-      name: 'M. van der Berg',
-      role: 'Managing Partner, Amsterdam Law Firm',
-      quote: 'Used them for a week of client visits across Zuidas and Schiphol. Every pickup was early, every vehicle immaculate. The discretion matters — unbranded cars, drivers who know when to be silent.',
+      name: 'Emma van Dijk',
+      role: 'Frequent traveler, Amsterdam',
+      quote: 'Used them for Schiphol runs for years. Price is fixed at booking, driver waits if flight is delayed. Never had a surprise charge.',
       rating: 5,
     },
     {
-      name: 'S. Andersson',
-      role: 'EA to C-Suite, Nordic Tech',
-      quote: 'We book their hourly disposal for executive roadshows. The team handles last-minute schedule changes without friction. Reliable in a way that lets me stop worrying about transport.',
+      name: 'Marco Rossi',
+      role: 'Tourist from Milan',
+      quote: 'Booked from my phone at the airport. Driver was there in 5 minutes, spoke English, knew exactly where our hotel was. Easy.',
       rating: 5,
     },
     {
-      name: 'J. de Vries',
-      role: 'Event Director, RAI Amsterdam',
-      quote: 'Coordinated 40+ VIP transfers for a three-day summit. Zero incidents. Their dispatcher acts as an extension of our team. That level of integration is rare.',
+      name: 'Lisa de Jong',
+      role: 'Amsterdam resident',
+      quote: 'My go-to for airport trips. Clean cars, on time, and the app saves my addresses. Much better than hailing a random cab.',
       rating: 5,
     },
   ],
 
   fleet: [
     {
-      name: 'Mercedes S-Class',
-      category: 'Executive Sedan',
+      name: 'Standard Sedan',
+      category: '1–3 passengers',
       capacity: '3 passengers',
       luggage: '2 large + 2 carry-on',
-      features: ['Massage seats', 'Privacy glass', 'Wi-Fi', 'Bottled water', 'Phone chargers'],
-      image: '/images/fleet/s-class.jpg',
+      features: ['Air conditioning', 'Phone chargers', 'Water'],
+      image: '/images/fleet/standard.jpg',
     },
     {
-      name: 'Mercedes V-Class',
-      category: 'Executive Van',
-      capacity: '6 passengers',
+      name: 'Comfort Van',
+      category: '4–7 passengers',
+      capacity: '7 passengers',
       luggage: '6 large + 4 carry-on',
-      features: ['Conference seating', 'Privacy partition', 'Wi-Fi', 'Refreshments', 'Work tables'],
-      image: '/images/fleet/v-class.jpg',
+      features: ['Extra legroom', 'Air conditioning', 'Phone chargers', 'Water'],
+      image: '/images/fleet/van.jpg',
     },
     {
-      name: 'BMW 7 Series',
-      category: 'Executive Sedan',
+      name: 'Premium Sedan',
+      category: '1–3 passengers (premium)',
       capacity: '3 passengers',
       luggage: '2 large + 2 carry-on',
-      features: ['Executive rear seating', 'Panoramic roof', 'Wi-Fi', 'Ambient lighting', 'Climate zones'],
-      image: '/images/fleet/7-series.jpg',
+      features: ['Leather seats', 'Extra legroom', 'Wi-Fi', 'Water', 'Phone chargers'],
+      image: '/images/fleet/premium.jpg',
     },
   ],
 }
 
-// Service-specific data for business chauffeur — using original slugs
+// Service-specific data for regular passengers — using original slugs
 export const SERVICES = {
   schipholAirportTaxi: {
     title: 'Schiphol Airport Transfers',
     slug: 'schiphol-airport-taxi',
-    description: 'Executive airport transfer from Schiphol to Amsterdam City Centre, Zuidas, or RAI. Flight-tracked, 60 min wait included.',
-    keywords: ['Schiphol chauffeur', 'airport transfer Amsterdam', 'executive airport taxi'],
-    mainKeyword: 'schiphol airport chauffeur service',
-  },
-  corporateRoadshows: {
-    title: 'Corporate Roadshows',
-    slug: 'business-taxi-amsterdam',
-    description: 'Multi-stop hourly disposal for executive schedules across Amsterdam and Randstad. Dedicated vehicle and driver.',
-    keywords: ['corporate chauffeur Amsterdam', 'roadshow transport', 'executive hourly hire'],
-    mainKeyword: 'corporate roadshow chauffeur amsterdam',
-  },
-  eventTransport: {
-    title: 'Event & Conference Transport',
-    slug: 'day-trip-transfer',
-    description: 'VIP shuttle coordination for RAI, Beurs van Berlage, and private venues. Fleet scaling, dispatcher integration.',
-    keywords: ['event transport Amsterdam', 'conference chauffeur', 'VIP shuttle service'],
-    mainKeyword: 'event chauffeur service amsterdam',
+    description: 'Fixed-price airport transfer from Schiphol to Amsterdam City Centre, Amstelveen, Haarlem. Flight-tracked, 45 min wait included.',
+    keywords: ['Schiphol taxi', 'airport transfer Amsterdam', 'Schiphol airport taxi'],
+    mainKeyword: 'schiphol airport taxi service',
   },
   cityTransfer: {
-    title: 'Inter-City Transfers',
+    title: 'City Rides & Transfers',
     slug: 'amsterdam-transport-booking',
-    description: 'Amsterdam ⇄ The Hague, Rotterdam, Utrecht, Brussels. Door-to-door, productive travel time.',
-    keywords: ['Amsterdam to Hague chauffeur', 'intercity executive transfer', 'business travel Netherlands'],
-    mainKeyword: 'intercity chauffeur netherlands',
+    description: 'Point-to-point rides across Amsterdam, Amstelveen, Haarlem, The Hague. Book now or schedule ahead.',
+    keywords: ['taxi Amsterdam', 'city transport Amsterdam', 'book taxi Amsterdam'],
+    mainKeyword: 'amsterdam taxi booking',
+  },
+  dayTrip: {
+    title: 'Day Trips & Excursions',
+    slug: 'day-trip-transfer',
+    description: 'Private day trips to Zaanse Schans, Keukenhof, Volendam, Utrecht. Driver waits, returns you same day.',
+    keywords: ['day trip Amsterdam', 'private tour Netherlands', 'day excursion from Amsterdam'],
+    mainKeyword: 'amsterdam day trip taxi',
+  },
+  familyTransfer: {
+    title: 'Family & Group Transport',
+    slug: 'family-transfer-service',
+    description: 'Vans for 4–7 passengers with luggage. Child seats available on request. Stress-free airport runs.',
+    keywords: ['family taxi Amsterdam', 'group transport Schiphol', 'van taxi Amsterdam'],
+    mainKeyword: 'family taxi service amsterdam',
   },
 }
 
-// FAQ content tailored to business clients
+// FAQ content for regular passengers
 export const FAQ_ITEMS = [
   {
-    question: 'How does flight tracking work for Schiphol transfers?',
-    answer: 'We monitor your flight in real time. If you land early or late, your chauffeur adjusts automatically — no action needed from you. Complimentary wait time is 60 minutes after actual arrival.',
+    question: 'How do I book a taxi from Schiphol Airport?',
+    answer: 'Book online or call +31 20 308 6885. We track your flight — if it\'s delayed, your driver waits up to 45 minutes free. You\'ll get a confirmation with driver details.',
   },
   {
-    question: 'Can I book an unbranded vehicle for discretion?',
-    answer: 'Yes. All our fleet can be deployed without company branding. Simply request "discreet vehicle" at booking. Drivers wear business attire without logos.',
+    question: 'Are prices fixed or metered?',
+    answer: 'Fixed prices. You see the total before you book — no meter, no surprises. Airport transfers include wait time and all fees.',
   },
   {
-    question: 'What is included in the hourly disposal rate?',
-    answer: 'The hourly rate covers vehicle, chauffeur, fuel, insurance, and standard wait time. Minimum 3 hours. Parking fees and tolls are itemized separately on the invoice.',
+    question: 'Can I book a child seat?',
+    answer: 'Yes. Request a child seat when booking (infant, toddler, or booster). No extra charge. We\'ll have it installed when your driver arrives.',
   },
   {
-    question: 'How do you handle last-minute schedule changes?',
-    answer: 'Our dispatch team operates 24/7. Changes communicated via your booking portal or direct line are relayed to your chauffeur in real time. No re-booking fees for adjustments within the same disposal period.',
+    question: 'What if my flight is early or late?',
+    answer: 'We track every flight in real time. Your driver adjusts automatically — early arrival means they\'re there early; delays up to 45 min are covered at no extra cost.',
   },
   {
-    question: 'Do you provide invoicing for corporate accounts?',
-    answer: 'Yes. We offer consolidated monthly invoicing with VAT breakdown, ride-level detail, and cost-center tagging. Terms: net 14 days. Contact us to set up a corporate account.',
+    question: 'Do you accept card payments?',
+    answer: 'Yes. Pay by card in the car, or prepay online. All major cards, Apple Pay, Google Pay accepted. Cash also accepted.',
   },
   {
-    question: 'What vehicles are available for groups larger than 3?',
-    answer: 'The Mercedes V-Class accommodates 6 passengers with executive conference seating. For larger groups, we coordinate multiple V-Class vehicles with a lead dispatcher.',
-  },
-  {
-    question: 'Is Wi-Fi available in all vehicles?',
-    answer: 'Yes. Every vehicle in our fleet has 4G/5G mobile Wi-Fi with unlimited data for passengers. Connection details are provided by your chauffeur.',
-  },
-  {
-    question: 'What are your payment terms for corporate clients?',
-    answer: 'Corporate accounts: net 14 days on monthly consolidated invoices. Ad-hoc bookings: card at booking or cash/card with chauffeur. All major cards accepted.',
+    question: 'Can I book for someone else?',
+    answer: 'Absolutely. Enter their pickup location, destination, and phone number. We\'ll send them the driver details directly.',
   },
 ]
 
@@ -185,17 +172,17 @@ export const FAQ_ITEMS = [
 export const PROCESS_STEPS = [
   {
     number: 1,
-    title: 'Request',
-    description: 'Submit your itinerary via our booking form, email, or phone. Include flight numbers, addresses, and any special requirements.',
+    title: 'Enter trip details',
+    description: 'Pickup, destination, date/time, passengers. See fixed price instantly.',
   },
   {
     number: 2,
-    title: 'Confirm',
-    description: 'Receive a fixed-price confirmation with chauffeur details, vehicle assignment, and direct contact number — typically within 15 minutes.',
+    title: 'Confirm & pay',
+    description: 'Enter contact details. Pay now or in the car. Instant confirmation with driver info.',
   },
   {
     number: 3,
-    title: 'Arrive',
-    description: 'Your chauffeur arrives 15 minutes early, tracks your flight, and waits up to 60 minutes complimentary. You travel; we handle the rest.',
+    title: 'Ride',
+    description: 'Driver arrives on time, helps with luggage, takes the best route. You arrive relaxed.',
   },
 ]

@@ -20,42 +20,42 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
-      <body className="bg-off-white text-charcoal antialiased max-w-none">
-        <div className="flex min-h-screen flex-col bg-off-white text-charcoal">
-          <header className="sticky top-0 z-40 w-full border-b border-border bg-surface/95 backdrop-blur supports-[backdrop-filter]:bg-surface/60">
+      <body className="bg-[var(--bg)] text-[var(--ink)] antialiased min-h-screen flex flex-col">
+        <div className="flex min-h-screen flex-col bg-[var(--bg)] text-[var(--ink)]">
+          <header className="sticky top-0 z-40 w-full border-b border-[var(--border)] bg-[var(--surface)]/95 backdrop-blur supports-[backdrop-filter]:bg-[var(--surface)]/60">
             <div className="container flex h-16 items-center justify-between">
               <div className="flex items-center gap-2">
-                <a href="/" className="text-2xl font-bold text-primary" aria-label="Dutch Taxi Transfers Home">
+                <a href="/" className="text-2xl font-bold text-[var(--primary)]" aria-label="Dutch Taxi Transfers Home">
                   Dutch Taxi Transfers
                 </a>
               </div>
               <nav className="hidden md:flex items-center gap-6">
-                <a href="/" className="text-sm font-medium text-charcoal hover:text-primary transition">
+                <a href="/" className="text-sm font-medium text-[var(--ink)] hover:text-[var(--primary)] transition">
                   Home
                 </a>
-                <a href="/schiphol-airport-transfers" className="text-sm font-medium text-charcoal hover:text-primary transition">
+                <a href="/schiphol-airport-transfers" className="text-sm font-medium text-[var(--ink)] hover:text-[var(--primary)] transition">
                   Airport Transfers
                 </a>
-                <a href="/corporate-roadshows" className="text-sm font-medium text-charcoal hover:text-primary transition">
+                <a href="/corporate-roadshows" className="text-sm font-medium text-[var(--ink)] hover:text-[var(--primary)] transition">
                   Roadshows
                 </a>
-                <a href="/event-transport" className="text-sm font-medium text-charcoal hover:text-primary transition">
+                <a href="/event-transport" className="text-sm font-medium text-[var(--ink)] hover:text-[var(--primary)] transition">
                   Events
                 </a>
-                <a href="/fleet" className="text-sm font-medium text-charcoal hover:text-primary transition">
+                <a href="/fleet" className="text-sm font-medium text-[var(--ink)] hover:text-[var(--primary)] transition">
                   Fleet
                 </a>
               </nav>
               <div className="flex items-center gap-3">
                 <a
                   href="tel:+31203086885"
-                  className="hidden sm:inline-flex items-center justify-center rounded-md text-sm font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none bg-secondary text-primary hover:bg-orange-600 px-4 py-2"
+                  className="hidden sm:inline-flex items-center justify-center rounded-md text-sm font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none bg-[var(--accent)] text-[var(--ink)] hover:bg-orange-600 px-4 py-2"
                 >
                   +31 20 308 6885
                 </a>
                 <a
                   href="/booking"
-                  className="inline-flex items-center justify-center rounded-md text-sm font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none bg-primary text-white hover:bg-blue-700 px-4 py-2"
+                  className="inline-flex items-center justify-center rounded-md text-sm font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none bg-[var(--primary)] text-white hover:bg-blue-700 px-4 py-2"
                 >
                   Book Now
                 </a>

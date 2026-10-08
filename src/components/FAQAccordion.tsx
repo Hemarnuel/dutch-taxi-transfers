@@ -17,14 +17,14 @@ export default function FAQAccordion({ items }: FAQAccordionProps) {
   const faqItems = items || FAQ_ITEMS
 
   return (
-    <section className="bg-[#F5F5F5] py-16 md:py-20">
+    <section className="bg-[var(--bg)] py-16 md:py-20">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-            Corporate Transport FAQ
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[var(--ink)]">
+            Questions, Straight Answers
           </h2>
-          <p className="text-gray-600 mb-12 text-lg">
-            Answers to the questions business travelers ask about our executive chauffeur service.
+          <p className="text-[var(--ink-secondary)] mb-12 text-lg">
+            Everything you need to know before you book your ride.
           </p>
 
           <div className="space-y-3">
@@ -35,7 +35,7 @@ export default function FAQAccordion({ items }: FAQAccordionProps) {
               >
                 <button
                   onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
-                  className="w-full px-6 py-4 flex items-center justify-between bg-white hover:bg-gray-50 transition text-left"
+                  className="w-full px-6 py-4 flex items-center justify-between bg-[var(--surface)] hover:bg-gray-50 transition text-left"
                 >
                   <h3 className="font-semibold text-gray-900 text-base md:text-lg pr-4">
                     {item.question}
