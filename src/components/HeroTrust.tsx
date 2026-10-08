@@ -5,7 +5,7 @@ import { BUSINESS_DATA } from '@/lib/constants'
 
 export default function HeroTrust() {
   return (
-    <section className="relative bg-[#0D141C] text-white py-20 md:py-28 overflow-hidden">
+    <section className="relative bg-[#0D141C] text-white min-h-screen py-20 md:py-28 flex items-center overflow-hidden">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-amber-500 rounded-full blur-3xl opacity-20"></div>
