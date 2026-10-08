@@ -1,8 +1,8 @@
 // Business data and constants for Dutch Taxi Transfers — Regular Passenger Taxi Service Amsterdam
 export const BUSINESS_DATA = {
   name: 'Dutch Taxi Transfers',
-  description: 'Amsterdam taxi service for airport transfers, city rides, and point-to-point transport. Fixed prices, 24/7, book in seconds.',
-  phone: '+31 20 308 6885',
+  description: 'Your trusted transfer service for Schiphol, Amsterdam and beyond. Book your ride and travel with confidence.',
+  phone: '+31 020 308 6885',
   email: 'bookings@dutchtaxitransfers.nl',
   website: 'https://dutchtaxitransfers.nl',
 
@@ -48,13 +48,12 @@ export const BUSINESS_DATA = {
   trustSignals: {
     yearsInBusiness: 15,
     rating: 4.8,
-    reviewCount: 1247,
+    reviewCount: 500,
     onTimeRate: 97,
     guarantees: [
-      'Fixed price — confirmed at booking',
-      'Flight tracking included',
-      '45 min complimentary wait time',
-      'Clean, modern fleet',
+      'Fixed pricing — no hidden fees',
+      'Professional English-speaking drivers',
+      'Flight monitoring included',
       '24/7 customer support',
     ],
   },
@@ -144,7 +143,7 @@ export const SERVICES = {
 export const FAQ_ITEMS = [
   {
     question: 'How do I book a taxi from Schiphol Airport?',
-    answer: 'Book online or call +31 20 308 6885. We track your flight — if it\'s delayed, your driver waits up to 45 minutes free. You\'ll get a confirmation with driver details.',
+    answer: 'Book online or call +31 020 308 6885. We track your flight — if it\'s delayed, your driver waits up to 45 minutes free. You\'ll get a confirmation with driver details.',
   },
   {
     question: 'Are prices fixed or metered?',
